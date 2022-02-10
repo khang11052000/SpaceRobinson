@@ -9,6 +9,8 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public float speed = 10f;
     
+    
+    
     public GameObject weaponAndHands;
     //public GameObject meleeWeapon;
     
@@ -23,8 +25,8 @@ public class Shooting : MonoBehaviour
             var bullet2 = Instantiate (bullet, transform.position, transform.rotation);
             Rigidbody2D rb = bullet2.GetComponent<Rigidbody2D>();
             rb.AddForce(direction * speed, ForceMode2D.Impulse);
-            Debug.Log("shooting");
-            Debug.Log(rb.gameObject.name);
+            // Debug.Log("shooting");
+            // Debug.Log(rb.gameObject.name);
         }
         
         Turning();

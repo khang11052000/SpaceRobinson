@@ -13,6 +13,8 @@ public class EnemyAI : MonoBehaviour
 
     public Transform enemyGFX;
 
+    public Animator animator;
+    
     Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
@@ -27,6 +29,11 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, .5f);
+    }
+
+    private void Update()
+    {
+        animator.SetFloat("Distance", Mathf.Abs(currentWaypoint));
     }
 
     void UpdatePath()
