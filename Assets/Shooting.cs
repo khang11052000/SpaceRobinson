@@ -18,17 +18,15 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         Vector2 direction = (cursor.transform.position - firePoint.transform.position).normalized;
-        
-        
+
         if (Input.GetMouseButtonDown(0))
         {
-            var bullet2 = Instantiate (bullet, transform.position, transform.rotation);
+            var bullet2 = Instantiate(bullet, transform.position, transform.rotation);
             Rigidbody2D rb = bullet2.GetComponent<Rigidbody2D>();
             rb.AddForce(direction * speed, ForceMode2D.Impulse);
             // Debug.Log("shooting");
             // Debug.Log(rb.gameObject.name);
         }
-        
         Turning();
     }
     
@@ -44,7 +42,7 @@ public class Shooting : MonoBehaviour
 
         Vector2 direct = new Vector2(mousePos.x - playerPos.x, mousePos.y - playerPos.y);
         
-
+        
         if (mousePos.x > playerPos.x + 0.01f)
         {
             weaponAndHands.transform.right = direct;

@@ -9,6 +9,7 @@ public class HealthHero : MonoBehaviour
     public int maxHealth = 5;
     private int _currentHealth;
 
+    
     private void Awake()
     {
         _currentHealth = maxHealth;
