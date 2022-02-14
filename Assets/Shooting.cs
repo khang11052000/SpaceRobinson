@@ -46,12 +46,18 @@ public class Shooting : MonoBehaviour
         if (mousePos.x > playerPos.x + 0.01f)
         {
             weaponAndHands.transform.right = direct;
+            Vector3 theScaleBullet = bullet.transform.localScale;
+            theScaleBullet.x = 1;
+            bullet.transform.localScale = theScaleBullet;
             return;
         }
 
         if (mousePos.x < playerPos.x - 0.01f)
         {
             weaponAndHands.transform.right = -direct;
+            Vector3 theScaleBullet = bullet.transform.localScale;
+            theScaleBullet.x = -1;
+            bullet.transform.localScale = theScaleBullet;
             return;
         }
         

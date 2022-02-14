@@ -23,8 +23,9 @@ public class BulletController : MonoBehaviour
         {
             BaseEntity enemyEntity = collision.gameObject.GetComponent<BaseEntity>();
             enemyEntity.OnTakeDamage?.Invoke(damage);
-            Debug.Log(collision.gameObject.name);
+            Debug.Log(collision.gameObject.layer);
         }
+        
         Destroy(gameObject);
     }
 }

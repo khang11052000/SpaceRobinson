@@ -36,6 +36,6 @@ public class HealthEnemy : BaseComponent, IDamageable
 
     private void Update()
     {
-        Debug.Log(_currentHealth);
+        //Debug.Log(_currentHealth);
     }
 }
