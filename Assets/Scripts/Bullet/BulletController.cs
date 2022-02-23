@@ -11,11 +11,6 @@ public class BulletController : MonoBehaviour
     
     public LayerMask layerTakeDamage;
 
-    public void Setup()
-    {
-        
-    }
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check layer in layer take damage

@@ -10,7 +10,7 @@ public abstract class BaseEntity : MonoBehaviour
     protected BaseComponent[] components;
     
     public Action<int> OnTakeDamage;
-    //ublic Action<int> OnHealing;
+    //public Action<int> OnHealing;
     public Action OnDeath;
     
     protected virtual void OnValidate()
